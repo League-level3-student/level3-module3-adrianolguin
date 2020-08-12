@@ -2,6 +2,9 @@ package _00_Text_Funkifier;
 
 import static org.junit.Assert.*;
 
+import java.util.HashMap;
+import java.util.Stack;
+
 import org.junit.jupiter.api.Test;
 
 public class _00_TestSpecialString {
@@ -27,6 +30,8 @@ public class _00_TestSpecialString {
 	//   to make the JUnitTest case pass.
 	@Test
 	public void testMixedCapsString() {
+		Stack<String> strings = new Stack<String>();
+		//strings.push
 		SpecialString mcs = new MixedCapsString("This is also a test");
 		System.out.println(mcs);
 		assertEquals("tHiS Is aLsO A TeSt", mcs.toString());
@@ -38,6 +43,8 @@ public class _00_TestSpecialString {
 	//   the JUnitTest case below to test your customized Special String.
 	@Test
 	public void testCustomString() {
-	
+	SpecialString tcs = new ToCapsString("this is once again a test");
+	System.out.println(tcs);
+	assertEquals("THIS IS ONCE AGAIN A TEST", tcs.toString());
 	}
 }
